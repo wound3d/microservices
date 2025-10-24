@@ -1,0 +1,12 @@
+services:
+  service2:
+    build: ./
+    container_name: service2_mq
+    ports:
+      - "5001:5001"
+    networks:
+      - rabbit_net
+      
+networks:
+  rabbit_net:
+    external: true
