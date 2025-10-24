@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@elastic/elasticsearch": "^9.1.1",
+    "express": "^5.1.0",
+    "uuid": "^13.0.0",
+    "winston": "^3.18.3",
+    "winston-logstash-transport": "^2.0.0"
+  }
+}

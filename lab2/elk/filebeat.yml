@@ -1,0 +1,19 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /src/logs/*.log
+  fields:
+    service: test_service1
+
+- type: log
+  enabled: true
+  paths:
+    - /src/logs/*.log
+  fields:
+    service: test_service2
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+  

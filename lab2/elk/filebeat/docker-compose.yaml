@@ -1,0 +1,20 @@
+services:
+  beats:
+    image: elastic/filebeat:7.16.2
+    container_name: beats
+    command: filebeat -e -strict.perms=false
+    volumes:
+    - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+    - ../logs:/src/logs
+    depends_on:
+      - logstash
+
+networks:
+  elastic:
+    external:: true
+
+volumes:
+    elasticsearch_data:
+        driver: local
+
+  

@@ -1,0 +1,20 @@
+services:
+  service1:
+    build: ./
+    container_name: service1
+    ports:
+      - "5000:5000"
+    volumes:
+        - ../logs:/src/logs
+    networks:
+      - gateway
+
+networks:
+  gateway:
+    external: true
+
+volumes:
+    elasticsearch_data:
+        driver: local
+
+  
