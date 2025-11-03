@@ -5,13 +5,13 @@ services:
     command: filebeat -e -strict.perms=false
     volumes:
     - ./filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
-    - ../logs:/src/logs
-    depends_on:
-      - logstash
+    - ../logs:/var/www/html/:ro
+    networks:
+      - elastic
 
 networks:
   elastic:
-    external:: true
+    external: true
 
 volumes:
     elasticsearch_data:

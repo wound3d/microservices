@@ -1,7 +1,7 @@
 services:
   logstash:
     image: logstash:9.1.5
-    container_name: logstash
+    container_name: logstash_con
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
       XPACK_MONITORING_ENABLED: "false"
@@ -16,6 +16,6 @@ services:
 
 networks:
   elastic:
-    external:: true
+    external: true
 
   

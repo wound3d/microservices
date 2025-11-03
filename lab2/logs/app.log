@@ -118,3 +118,6 @@
 {"level":"info","message":"Service1: Request with id f4347cba-99ec-4351-9850-2892243ec357 received!","timestamp":"2025-10-24T16:14:55.220Z"}
 {"level":"info","message":"Service 2 has started on port 5002","timestamp":"2025-10-24T16:26:36.113Z"}
 {"level":"info","message":"Service 2: Request with id a6d1b2db-5527-440a-8dbb-66fc83e73ff6 received!","timestamp":"2025-10-24T16:30:25.522Z"}
+{"level":"info","message":"Service 2 has started on port 5002","timestamp":"2025-10-26T13:20:03.200Z"}
+{"level":"info","message":"Service 2 has started on port 5002","timestamp":"2025-11-03T03:52:10.936Z"}
+{"level":"info","message":"Service 2: Request with id ca3a512d-faef-4237-a372-d2a58ec8003a received!","timestamp":"2025-11-03T03:53:08.856Z"}

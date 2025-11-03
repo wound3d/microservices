@@ -2,14 +2,14 @@ filebeat.inputs:
 - type: log
   enabled: true
   paths:
-    - /src/logs/*.log
+    - /var/www/html/*
   fields:
     service: test_service1
 
 - type: log
   enabled: true
   paths:
-    - /src/logs/*.log
+    - /var/www/html/*
   fields:
     service: test_service2
 
