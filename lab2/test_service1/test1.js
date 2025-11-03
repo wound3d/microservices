@@ -2,9 +2,6 @@ import express from 'express';
 import logger from './logger.js';
 import { v4 as uuidv4 } from 'uuid';
 
-const express = require('express')
-const uuidv4 = require('uuid')
-
 const app = express()
 const port = 5000
 
