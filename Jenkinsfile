@@ -14,15 +14,15 @@ pipeline {
         
         stage('Build') {
             steps {
-                echo 'Launching commands...'
-                cd lab2/test_service1
-                bat 'docker compose up --build'
-                cd lab2/test_service2
-                bat 'docker compose up --build'
-                cd lab2/gateway
-                bat 'docker compose up --build'
-                echo "Services started. Showing status:"
-                bat 'docker-compose ps'
+                 bat '''
+                    cd lab2/test_service1
+                    docker compose up --build
+                    cd ..\test_service2
+                    docker compose up --build
+                    cd ..\gateway
+                    docker compose up --build
+                    docker-compose ps
+                '''
 
                 
             }
