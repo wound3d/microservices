@@ -12,16 +12,14 @@ pipeline {
             }
         }
 
-        stage('Check Docker Context') {
-            steps {
-                bat 'docker info'
-                bat 'docker ps -a'
-            }
-        }
-        
-        stage('Build') {
+        stage('Check Hosts') {
             steps {
                 bat 'echo %DOCKER_HOST%'
+            }
+        }
+
+        stage('Build') {
+            steps {
                  bat '''
                     cd lab2/test_service1
                     docker compose up --build -d
@@ -29,7 +27,7 @@ pipeline {
                     docker compose up --build -d
                     cd ../gateway
                     docker compose up --build -d
-                    docker-compose ps -a
+                    docker ps -a
                 '''
 
                 
