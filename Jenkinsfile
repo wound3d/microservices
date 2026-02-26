@@ -16,11 +16,11 @@ pipeline {
             steps {
                  bat '''
                     cd lab2/test_service1
-                    docker compose up --build
+                    docker compose up --build -d
                     cd ../test_service2
-                    docker compose up --build
+                    docker compose up --build -d
                     cd ../gateway
-                    docker compose up --build
+                    docker compose up --build -d
                     docker-compose ps
                 '''
 
