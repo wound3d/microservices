@@ -15,7 +15,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Launching commands...'
-                bat 'docker build -t jenkins-lab3:latest .'
+                bat 'docker build -t jenkins-lab3:latest -f lab2/Dockerfile lab2/'
 
                 
             }
