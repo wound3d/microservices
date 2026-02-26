@@ -23,7 +23,7 @@ pipeline {
                 cd lab2/gateway
                 bat 'docker compose up --build'
                 echo "Services started. Showing status:"
-                docker-compose ps
+                bat 'docker-compose ps'
 
                 
             }
