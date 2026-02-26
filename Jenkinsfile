@@ -15,7 +15,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Launching commands...'
-                bat 'docker network create gateway'
                 cd lab2/test_service1
                 bat 'docker compose up --build'
                 cd lab2/test_service2
