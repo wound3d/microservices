@@ -21,7 +21,7 @@ pipeline {
                     docker compose up --build -d
                     cd ../gateway
                     docker compose up --build -d
-                    docker-compose ps
+                    docker-compose ps -a
                 '''
 
                 
