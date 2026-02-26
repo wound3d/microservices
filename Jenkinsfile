@@ -15,7 +15,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Launching commands...'
-                bat 'docker build -t jenkins-lab3:latest -f lab2/Dockerfile lab2/'
+                bat 'docker create network gateway'
+                cd lab2/test_service1
+                bat 'docker compose up --build'
+                cd lab2/test_service2
+                bat 'docker compose up --build'
+                cd lab2/gateway
+                bat 'docker compose up --build'
+                echo "Services started. Showing status:"
+                docker-compose ps
 
                 
             }
